@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #container {
+            justify-content: space-between;
+            display: flex;
+        }
+
+        #container div {
+            display: flex;
+            height: 30px;
+            width: 500px;
+            border: 1px solid black;
+            justify-content: space-between;
+        }
+
+        i {
+            font-size: 30px;
+        }
+
+
+        #province {
+            background-color: rgb(244, 244, 244);
+            text-decoration: none;
+
+        }
+
+        .menu {
+            background-color: aqua;
+            height: 300px;
+            width: 200px;
+            overflow-y: scroll;
+            display: none;
+        }
+    </style>
+</head>
+
+<div id="checkOutBox">
+    <i class="fa-regular fa-rectangle-xmark" id="x2"></i>
+    <h3>CHECK OUT INFO</h3>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Name">
+    <label for="phoneNumber">Phone number</label>
+    <input type="number" id="phoneNumber" placeholder="Phone number">
+    <div>
+        <label for="">Province</label>
+        <input id="province"  placehholder="Province"></input>
+        <i id="drop1" onclick="showProvince()" class="fa-regular fa-square-caret-down"></i><br>
+    </div>
+    <div>
+        <label for="district">District</label>
+        <input id="district" placeholder="District"></input>
+        <i id="drop2" onclick="showDistrict()"  class="fa-regular fa-square-caret-down"></i><br>
+    </div>
+    <div>
+        <label for="village">Village</label>
+        <input id="village" placeholder="Village"></input>
+        <i id="drop3" onclick="showVillage()" class="fa-regular fa-square-caret-down"></i><br>
+    </div>
+    <div id="provinceMenu" class="menu"></div>
+    <div id="districtMenu" class="menu"></div>
+    <div id="villageMenu" class="menu"></div>
+    <button id="confirmCheckOut">CONFIRM</button>
+</div>
+
+<script src="./js/test.js"></script>
+</body>
+
+</html>

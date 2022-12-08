@@ -1,0 +1,96 @@
+.bodyLogin {
+    background-image: url(../image/ROG_wallpaper_S17_FHD.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: black;
+    opacity: 50%;
+    height: 650px;
+    width: 400px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    box-shadow: 1px 1px 3px 3px whitesmoke;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+}
+
+.login-form {
+    height: 650px;
+    width: 400px;
+    justify-items: center;
+}
+
+.login-container .title {
+    color: white;
+    background-color: black;
+    height: 64px;
+    text-align: center;
+    line-height: 64px;
+}
+
+.login-container label {
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+.login-container input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    margin-left: 10%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.login-container button {
+    position: relative;
+    display: block;
+    height: 35px;
+    width: 70px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    box-shadow: 1px 1px 3px 3px rgb(243, 241, 241);
+}
+
+.login-container button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, red, yellow);
+    outline: none;
+}
+
+.login-container #icon {
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+    color: red;
+    top: 2px;
+}
+
+.login-container .error {
+    margin-left: 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: yellow;
+}
+
+.login-container .register {
+    margin-left: 20%;
+    margin-top: 10px;
+}

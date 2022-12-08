@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/web.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 
+    <form action="">
+        <i class="fa-regular fa-rectangle-xmark" id="x2"></i>
+            <h3>CHECK OUT INFO</h3>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name">
+            <label for="phoneNumber">Phone number</label>
+            <input type="number" id="phoneNumber" placeholder="Phone number">
+            <label for="province">Province</label>
+            <select name="province" id="province">
+                <option value=""></option>
+            </select>
+            <label for="district">District</label>
+            <select name="district" id="district">
+                <option value=""></option>
+            </select>
+            <label for="ward">Ward</label>
+            <select name="ward" id="ward">
+                <option value=""></option>
+            </select>
+            <button type="submit" id="confirmCheckOut">CONFIRM</button>
+    </form> -->
+    <div id="checkOutBox">
+        <i class="fa-regular fa-rectangle-xmark" id="x2"></i>
+            <h3>CHECK OUT INFO</h3>
+            <form id="checkOutForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name">
+            <div class="errorConfirm"  id="errorNameConfirm"></div>
+            <label for="phoneNumber">Phone number</label>
+            <input type="number" id="phoneNumber" placeholder="Phone number">
+            <div class="errorConfirm"  id="errorPhoneConfirm"></div>
+            <label for="province">Province</label>
+            <select name="province" id="province">
+                <option value=""></option>
+            </select>
+            <div class="errorConfirm"  id="errorProvinceConfirm"></div>
+            <label for="district">District</label>
+            <select name="district" id="district">
+                <option value=""></option>
+            </select>
+            <div class="errorConfirm"  id="errorDistrictConfirm"></div>
+            <label for="ward">Ward</label>
+            <select name="ward" id="ward">
+                <option value=""></option>
+            </select>
+            <div class="errorConfirm"  id="errorWardConfirm"></div>
+            <button type="submit" id="confirmCheckOut" >CONFIRM</button>
+            </form>
+        </div>
+    <script>
+        let array = "";
+        let provinceList = document.getElementById("province");
+        let districtList = document.getElementById("district");
+        let wardList = document.getElementById("ward")
+        console.log(provinceList);
+        fetch('https://provinces.open-api.vn/api/?depth=3')
+            .then((response) => response.json())
+            .then((data) => {
+                array = data;
+                console.log(array);
+                let province = "";
+                for (let i = 0; i < array.length; i++) {
+                    province +=
+                        `
+                    <option value="${array[i].name}">${array[i].name}</option>
+                    `
+                }
+                
+                
+                provinceList.innerHTML += province;
+                provinceList.addEventListener("change", () => {
+                    console.log(provinceList.value);
+                    let i;
+                    array.forEach((element, index) => {
+                        if (element.name == provinceList.value) {
+                            i = index
+                            console.log(i);
+                        }
+                    });
+                    let district = "";
+                    console.log(array[i].districts);
+                    for (let index = 0; index < array[i].districts.length; index++) {
+                        district +=
+                            `
+                    <option value="${array[i].districts[index].name}">${array[i].districts[index].name}</option>
+                    `
+
+                    }
+                    document.getElementById("district").innerHTML += district;
+                    districtList.addEventListener("change", ()=>{
+                        console.log(districtList.value);
+                        array[i].districts.forEach((item,index)=>{
+                          if (item.name==districtList.value) {
+                            console.log(item.wards);
+                            let stringWard=""
+                            for (let index = 0; index < item.wards.length; index++) {
+                                stringWard +=`
+                                <option value="${item.wards.name}">${item.wards[index].name}</option>
+                                `
+                            }
+                            wardList.innerHTML=stringWard
+                          }
+                        })
+                        
+                    })
+
+                  
+                })
+
+
+
+
+
+            });
+    </script>
+</body>
+
+</html>

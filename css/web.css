@@ -1,0 +1,430 @@
+.menu-top .menuLeft {
+    margin-left: 10px;
+}
+
+.menu-top {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    height: 80px;
+    align-items: center;
+}
+
+.menu-top .menuRight {
+    color: white;
+}
+
+.menu-top .menuRight {
+    margin-right: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.menu-top .menuRight i {
+    cursor: pointer;
+}
+
+.menu-top .menuRight i:hover {
+    color: red;
+}
+
+.menuLeft img {
+    width: 80px;
+    height: 80px;
+}
+
+.menuCenter {
+    display: flex;
+    gap: 20px;
+}
+
+.menuCenter .dropdown p {
+    height: 80px;
+    line-height: 80px;
+    min-width: fit-content;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+.menuCenter .dropdown p:hover {
+    color: red;
+}
+
+.menuCenter .dropdown-content {
+    position: absolute;
+    background-color: black;
+    opacity: 70%;
+    flex-direction: column;
+    gap: 10px;
+    display: none;
+    min-width: 300px;
+    z-index: 1;
+    left: -100px;
+}
+
+.menuRight #dropdown-content {
+    position: absolute;
+    background-color: black;
+    opacity: 70%;
+    flex-direction: column;
+    display: none;
+    min-width: 150px;
+    z-index: 1;
+    left: -50px;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover #dropdown-content {
+    display: flex;
+}
+
+.dropdown-content a {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.dropdown-content .dropdown-item {
+    cursor: pointer;
+}
+
+#dropdown-content .dropdown-item:hover {
+    color: red;
+    background-color: black;
+    opacity: 70%;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.changePassForm {
+    background-color: black;
+    opacity: 90%;
+    height: 500px;
+    width: 350px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    position: fixed;
+    box-shadow: 1px 1px 3px 3px whitesmoke;
+    justify-content: center;
+    top: 100px;
+    z-index: 1;
+    right: 35%;
+}
+
+.changePass {
+    height: 500px;
+    width: 350px;
+    justify-items: center;
+}
+
+.changePassForm .title {
+    color: white;
+    background-color: black;
+    height: 64px;
+    text-align: center;
+    line-height: 64px;
+}
+
+.changePassForm label {
+    margin-left: 15%;
+    margin-top: 10px;
+}
+
+.changePassForm input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    margin-left: 10%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+#btnConfirm {
+    position: absolute;
+    left: 200px;
+    display: block;
+    height: 35px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 3px rgb(243, 241, 241);
+}
+
+.changePassForm .error {
+    margin-left: 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: yellow;
+}
+
+#btnConfirm:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, red, yellow);
+    outline: none;
+}
+
+#btnCancel {
+    position: absolute;
+    left: 85px;
+    display: block;
+    height: 35px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 3px 3px rgb(243, 241, 241);
+}
+
+#btnCancel:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, red, yellow);
+    outline: none;
+}
+
+#showPass,
+#showNewPass,
+#showRenewPass {
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+    color: red;
+    top: 2px;
+}
+.mainBody {
+    display: grid;
+    min-height: 500px;
+    /* margin: 0; */
+    grid-template-columns: auto auto auto;
+    padding: 20px;;
+}
+
+#carouselExampleIndicators #btn-prev {
+    width: 46px;
+    height: 66px;
+    top: 250px;
+}
+#carouselExampleIndicators #btn-prev:hover {
+    background-color: black;
+    opacity: 70%;
+    color: red;
+}
+#carouselExampleIndicators #btn-next {
+    width: 46px;
+    height: 66px;
+    top: 250px;
+}
+#carouselExampleIndicators #btn-next:hover{
+    background-color: black;
+    opacity: 70%;
+    color: red;
+}
+#footer i:hover {
+    color: red;
+}
+.grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    background-color: white;
+    border: 10px solid whitesmoke;
+    box-sizing: border-box;
+    
+}
+.grid-item hr { 
+    width: 80%;
+    margin: 0 auto;
+}
+.grid-item img {
+    width: 250px;
+    height: 184px;
+    object-fit: cover;
+}
+.grid-item img:hover{
+    cursor: pointer;
+    scale: 1.3;
+}
+
+.addToCart {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background-color: white;
+    border: red solid 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 3px rgb(243, 241, 241);
+    width: 300px;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grid-item button:hover {
+    cursor: pointer;
+    background-color: #e30017;
+    outline: none;
+    color: white;
+}
+.btnProduct {
+    padding: 0!important;
+    margin: 0!important;
+}
+
+#cartBox {
+    background-color: grey;
+    color: white;
+    transform: translateX(100%);
+    width: 25vw;
+    height: 75vh;
+    z-index: 3;
+    position: fixed;
+    right: 0;
+    top: 100px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e30017;
+}
+#cartBoxBody{
+    overflow-y: scroll;
+}
+.activeCartBox{
+    transform: translateX(0%)!important;
+    transition: 0.4s;
+}
+
+#x {
+    top: 100px;
+    color: white;
+    background-color: red;
+    width: 16.8px;
+    height: 16px;
+    cursor: pointer;
+}
+#x:hover {
+    background-color: #e30017;
+}
+
+#cartBoxFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#removeAll {
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    color: red;
+    margin: 5px;
+    border: red solid 1px;
+}
+#removeAll:hover{
+    background-color: red;
+    color: white;
+}
+#checkOut{
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    border: red solid 1px;
+    color: red;
+    margin: 5px;
+}
+#checkOut:hover{
+    background-color: red;
+    color: white;
+}
+
+.remove {
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    color: red;
+    border: red solid 1px;
+}
+.remove:hover {
+    background-color: red;
+    color: white;
+}
+
+/* #checkOutBox {
+    background-color: gray;
+    color: white;
+    transform: translateX(-100%);
+    width: 15vw;
+    height: 75vh;
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #e30017;
+}
+.activeCheckOutBox{
+    transform: translateX(0%)!important;
+    transition: 0.4s;
+} */
+#x2 {
+    top: 100px;
+    color: white;
+    background-color: red;
+    width: 16.8px;
+    height: 16px;
+    cursor: pointer;
+}
+#x2:hover {
+    background-color: #e30017;
+}
+
+#confirmCheckOut{
+    width: fit-content;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: white;
+    border: red solid 1px;
+    color: red;
+    margin: 5px;
+}
+#confirmCheckOut:hover{
+    background-color: red;
+    color: white;
+}
+
+#checkOutForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+

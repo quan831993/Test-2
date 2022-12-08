@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.bodyRegister {
+    background-image: url(../image/X13_wallpaper_final_16x9_FHD.jpg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    font-size: 14px;
+}
+
+.register-container {
+    background-color: black;
+    opacity: 50%;
+    height: 700px;
+    width: 400px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    box-shadow: 1px 1px 3px 3px whitesmoke;
+    left: 40%;
+    display: flex;
+    justify-content: center;
+    top: 20px;
+}
+
+.register-form {
+    height: 600px;
+    width: 400px;
+    justify-items: center;
+}
+.register-container .title {
+    color: white;
+    background-color: black;
+    height: 64px;
+    text-align: center;
+    line-height: 64px;
+}
+
+.register-container label{
+    margin-left: 15%;
+    margin-top: 5px;
+}
+
+.register-container input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    margin-left: 10%;
+    border-radius: 10px;
+    
+}
+
+.register-container button {
+    position: relative;
+    display: block;
+    height: 35px;
+    width: 70px;
+    background-color: antiquewhite;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    box-shadow: 1px 1px 3px 3px rgb(243, 241, 241);
+}
+
+.register-container button:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, red, yellow);
+    outline: none;
+}
+
+.register-container #icon {
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+    color: red;
+    top: 2px;
+}
+
+.register-container #iconClose {
+    position: relative;
+    left: -30px;
+    cursor: pointer;
+    color: red;
+    top: 2px;
+}
+
+.register-container .error {
+    margin-left: 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: yellow;
+    
+}
+
+.login {
+    margin-left: 30%;
+    margin-top: 5px;
+}
